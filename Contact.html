@@ -1,0 +1,93 @@
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="style.css">
+<style>
+	*{
+		margin: 0;
+		font-family: 'Josefin Sans', sans-serif; 
+	}
+	#contactForm{
+		text-align: center;
+	}
+	.int{
+		padding: 6px;
+		border: none;
+		outline: none;
+		border-bottom: 1px solid;
+		font-size: 16px;
+	}
+	textarea{
+		height: 117px;
+		widows: 172px;
+		outline: none;
+		resize: none;
+		font-size: 16px;
+	}
+	h2{
+		text-align: center;
+	}
+	.all{
+		margin-left: 500px;
+		margin-top: 150px;
+		display: inline-block; 
+		padding: 20px;
+		border: 1px solid #000;
+	}
+	#submit{
+		padding: 8px;
+		background: #fff;
+		color: #000;
+		cursor: pointer;
+		border: 1.2px solid;
+	}
+	#submit:hover{
+		color: #fff;
+		background: #000;
+	}
+	@media screen and (max-width: 800px) {
+		.all{
+			margin-left: 60px;
+		}
+}
+</style>
+<body>
+	<div class="all">
+	<h2>Contact Form</h2><br>
+    <form id="contactForm" action="https://script.google.com/macros/s/AKfycby8XvunWeNhefT_WzgovmCNY0c9l0s24WLPLQ9w2yuAgN9LUYykIbJljfYGqrr-hkhr3w/exec" method="post">
+        <input type="text" id="name" name="name" required placeholder="Name:-" class="int">
+        <br><br>
+        <input type="email" id="email" name="email" required placeholder="Email:-" class="int">
+        <br><br>
+        <textarea id="message" name="message" rows="4" required placeholder="Message:-"></textarea>
+        <br><br>
+        <button value="submit" id="submit">Submit</button>
+    </form>
+</div>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            submitForm();
+        });
+
+        function submitForm() {
+            var form = document.getElementById('contactForm');
+            var formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>

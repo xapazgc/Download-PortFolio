@@ -1,0 +1,289 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://kit.fontawesome.com/8aa17a250d.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap" rel="stylesheet">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+    h2{
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .head {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+    .nav {
+    display: flex;
+    margin-top: -20px;
+    margin-left: 130px;
+}
+    .btnb {
+    background: #ccc;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+    .a{
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    color: #000;
+}
+.a:hover{
+    color: red;
+}
+.btn{
+    background: transparent;
+    padding: 6px;
+    border: 1px solid;
+    border-image: linear-gradient(45deg, purple, orange) 1;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: -9px;
+    margin-left: 1145px;
+}
+.btn1{
+    background: transparent;
+    padding: 6px;
+    margin-top: -1px;
+    font-family: 'Josefin Sans', sans-serif;
+    border: 1px solid;
+    border-image: linear-gradient(45deg, darkblue, lightblue) 1;
+    margin-top: 25px;
+    width: 119px;
+    text-decoration: none;
+    margin-left: 1145px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.h2{
+    text-align: center;
+}
+.h3{
+    text-align: center;
+    margin-left: -325px;
+}
+.a1{
+    text-decoration: none;
+}
+.btn:hover{
+    color: #fff;
+    background: linear-gradient(45deg, purple, orange);
+}
+.btn1:hover{
+    color: #fff;
+    background: linear-gradient(45deg, darkblue, lightblue);
+}
+.h2,.h3{
+    font-size: 40px;
+}
+.h3{
+    margin-left: -165px;
+}
+.icon{
+    width: 60px;
+    border-radius: 125px;
+}
+.header{
+    text-align: center;
+    margin-top: 55px;
+}
+#changingBox {
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+      margin-left: 840px;
+      margin-top: -40px;
+      width: 310px;
+      padding: 2px;
+      border-radius: 325px;
+      color: #fff;
+    }
+    .text{
+        margin-left: -100px;
+    }
+    .download{
+        text-align: center;
+        margin-top: 50px;
+    }
+    .dnd{
+        background: #3498db;
+        padding: 8px;
+        color: #000;
+        cursor: pointer;
+        font-family: 'Josefin Sans', sans-serif;
+        border: 1px solid;
+        font-size: 25px;
+        background: transparent;
+        border-image: linear-gradient(45deg, darkred, orange) 1;
+    }
+    .dnd:hover{
+    color: #fff;
+    background: linear-gradient(45deg, darkred, orange);
+}
+
+@media screen and (max-width: 600px) {
+    .nav {
+        display: none;
+        margin-left: 200px;
+        margin-top: -16px;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    .dnd{
+        font-size: 15px;
+        width: 245px;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .nav a {
+        margin-bottom: 10px;
+    }
+    .con{
+        display: none;
+    }
+    .h2,.h3{
+    font-size: 20px;
+    }
+    .menu-icon {
+        display: block;
+        margin-top: -23px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .head {
+        margin-left: 30px;
+    }
+    #changingBox{
+        margin-left: 300px;
+        width: 140px;
+        margin-top: -17px;
+    }
+    .text{
+        margin-left: 0px;
+    }
+    .us{
+        margin-left: -1125px;
+        margin-top: 7px;
+    }
+}
+@media screen and (min-width: 769px) {
+    .menu-icon {
+        display: none;
+    }
+    #changingBox {
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+      margin-left: 820px;
+      margin-top: -40px;
+      width: 270px;
+      padding: 4px;
+      border-radius: 325px;
+      color: #fff;
+    }
+    .h2{
+        margin-left: 140px;
+    }
+    .con1{
+        display: none;
+    }
+}
+</style>
+<div class="head">
+    <button style="border: none; background: transparent; cursor: pointer;" id="reload"><h2>Xapaz GC</h2></button>
+</div>
+<div class="menu-icon" onclick="toggleMenu()">
+         ☰
+    </div>
+<div class="nav">
+    <a href="#" class="a">Home</a>&nbsp;&nbsp;
+    <a href="About.html" class="a">About</a>&nbsp;&nbsp;
+    <a href="Contact.html" class="a">Contact</a>&nbsp;&nbsp;
+    <div class="us">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzK24oZoWVseVEUSWSmpYn8ntTtvGShGHNfgpsT96cz_vSOg/viewform" class="a3"><button class="btn1" style="display: none">Upgrade&nbsp;</button></a>
+</div>
+</div>
+<div class="con">
+<div class="up">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzK24oZoWVseVEUSWSmpYn8ntTtvGShGHNfgpsT96cz_vSOg/viewform" target="_blank" class="a1"><button class="btn" style="width: 120px;">Upgrade Pass&nbsp;<i class="fa-solid fa-crown"></i></button></a>
+</div>
+<div class="donate">
+    <a href="Donate.html" target="_blank" class="a2"><button class="btn1">Donate&nbsp;<i class="fa-solid fa-circle-dollar-to-slot"></i></button></a>
+</div>
+</div>
+<div class="header">
+    <img src="https://i.ibb.co/3CCt3Tj/Icon.png" class="icon">
+</div>
+<div class="text">
+    <br>
+    <h2 class="h2">This Browser Is Design</h2>
+    <h2 class="h3">For<div id="changingBox"></div></h2>
+</div>
+<div class="download">
+    <a href="XAPAZGC.apk" target="_blank" download="Xapaz GC"><button class="dnd">Download Xapaz GC&nbsp;<i class="fa-solid fa-circle-down"></i></button></a>
+</div>
+<div class="con1">
+<div class="us">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzK24oZoWVseVEUSWSmpYn8ntTtvGShGHNfgpsT96cz_vSOg/viewform" target="_blank" class="a3"><button class="btn1" style="width: 45px; display: none;">Upgrade Pass&nbsp;<i class="fa-solid fa-crown"></i></button></a>
+</div>
+</div>
+<script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+</script>
+<script>
+  const changingBox = document.getElementById('changingBox');
+  const texts = [
+    { text: 'Gamers', color: '#3498db' },
+    { text: 'Programmers', color: '#2ecc71' },
+    { text: 'Blogger', color: '#e74c3c' },
+    { text: 'Music Listners', color: '#f39c12' },
+    { text: 'Youtubers', color: 'red' }
+  ];
+
+  let index = 0;
+
+  function changeText() {
+    changingBox.style.opacity = 0;
+    setTimeout(() => {
+      const currentText = texts[index];
+      changingBox.textContent = currentText.text;
+      changingBox.style.backgroundColor = currentText.color;
+      changingBox.style.opacity = 1;
+      index = (index + 1) % texts.length;
+    }, 500);
+  }
+
+  changeText(); 
+  setInterval(changeText, 2500); 
+</script>
+<script>
+    document.getElementById('reload').addEventListener('click', function() {
+            location.reload();
+        });
+</script>
